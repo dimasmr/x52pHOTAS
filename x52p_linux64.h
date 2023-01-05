@@ -49,6 +49,12 @@
 SDL_Window* window = NULL;		// Get the instance of the window, null is fine
 SDL_Renderer* renderer = NULL;	// Get the instance of the renderer, null is fine
 
+// Note: the pointer to the interfaces is written not as a struct, as opposed to the Windows version.
+// The SDL API is started only once.
+// A caveat is, this code has not tested yet for Simulink (CMEX S-Function API)
+// To use the header file .h and function definition file .cpp, perhaps it is better to write it like
+//      that in the Windows version, see https://github.com/dimasmr/x52pHOTAS
+
 // Global variable, the device count
 int deviceCount; 
 
