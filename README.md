@@ -1,6 +1,6 @@
 # x52proHOTAS
 Logitech/Saitek x52 pro H.O.T.A.S. joystick interface (C++, Simulink), using DirectX API (DirectInput and Direct Output).
-This requires DirectX.
+This requires DirectX in Windows. For Linux, see the linux branch in this repository.
 Developed on the basis of the samples shown in https://github.com/walbourn/directx-sdk-samples/tree/main/DirectInput/Joystick
 
 Make sure you have installed DirectX SDK https://www.microsoft.com/en-us/download/details.aspx?id=6812. This SDK providess the necessary headers like dinput.h and libraries like dinput8.lib, dxguid.lib.
