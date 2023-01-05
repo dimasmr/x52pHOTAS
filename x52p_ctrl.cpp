@@ -107,14 +107,14 @@ DIDEVCAPS x52p_ctrl::GetCaps() {
 
 	// Get the capabilities of the device object
 	// https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ee417892(v=vs.85)
-	thejoys.x52p_devs[0]->GetCapabilities(&caps); // Put it in the memory address of caps with DIDEVCAPS struct
+	thejoys.x52p_devs[joystick_id]->GetCapabilities(&caps); // Put it in the memory address of caps with DIDEVCAPS struct
 
 	return caps;
 }
 
 // Get button number from caps
 int x52p_ctrl::GetButtonNum() {
-	return button_num = caps.dwButtons;
+	return caps.dwButtons;
 }
 
 // Get the state from the device, do it every step
@@ -175,8 +175,11 @@ double x52p_ctrl::YJoy() {
 }
 
 double x52p_ctrl::ZJoy() {
-	if (state.lZ > thrsZ + deadzone || state.lZ < thrsZ - deadzone) {
-		return((thrsZ - state.lZ) / thrsZ);
+	// Modified correctly, Jan 2023
+	double tmpZ = thrsZ - state.lZ; // Set to 0 to thrsZ
+	
+	if (tmpZ > deadzone) {
+		return(tmpZ / thrsZ);
 	}
 	else {
 		return 0.0f;

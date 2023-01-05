@@ -44,6 +44,8 @@ int main() {
 	x52p_ctrl controller(0);	// Instantiate and object/instance with ID as argument
 	//controller.InitDev();
 
+	int button_num = controller.GetButtonNum();	// Get the button number
+
 	while (1) {
 		//bool resp = controller.IsDevConnected();	// Debugging section
 		//std::cout << resp;
@@ -52,8 +54,6 @@ int main() {
 		//std::cout << controller.thejoys.x52p_devs;	// Should persist
 		
 		controller.GetState();	// Get device's state
-		controller.GetCaps();	// Get device's capabilities
-		int button_num = controller.GetButtonNum();	// Get the button number
 		
 		axes[0] = controller.XJoy();	// Axes
 		axes[1] = controller.YJoy();

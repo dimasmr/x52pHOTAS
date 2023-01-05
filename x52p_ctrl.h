@@ -39,6 +39,11 @@ extern "C" {
 HINSTANCE hInstance = GetModuleHandle(NULL); // Instance of the window, null is fine
 
 // Define the struct for multiple joysticks
+// Note: the pointer to the interfaces is written as a struct for the ease in Simulink,
+//	     that is, to make it easier in general as a static variable in Simulink/CMEX S-Function API
+// A caveat is, every time a DirectInputDevice object is made, the DirectInput API is started.
+// See the InitDev() method.
+// See the Linux version where the SDL API is started only once. https://github.com/dimasmr/x52pHOTAS/tree/linux
 struct Joysticks
 {
 	unsigned int deviceCount;
@@ -107,7 +112,6 @@ private:
 	DIJOYSTATE2 state;		// DJOYSTATE structure of DirectInput https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ee416627(v=vs.85)
 	Joysticks thejoys;
 	int joystick_id; 
-	int button_num;
 
 	DWORD dwPage = 1;
 	const wchar_t* name = L"X52P_App";			// Any name of the App, necessary
