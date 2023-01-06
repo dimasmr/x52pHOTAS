@@ -23,8 +23,8 @@
 
 // C.	Necessary files to be in your folder (where your .slx present, or the referenced path):
 //			1. x52p_linux64.h the header file
-//			3. x52p_linux64.cpp the function definition file
-//			4. Your .cpp impelementation file: as an example this file.
+//			2. x52p_linux64.cpp the function definition file
+//			3. Your .cpp impelementation file: as an example this file.
 
 // HOW TO COMPILE IN VISUAL STUDIO CODE USING GCC
 // If you start fresh or tasks.json in .vscode directory is not present. Do the following:
