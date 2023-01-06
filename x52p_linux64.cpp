@@ -158,15 +158,15 @@ JoyStates x52p_linux64::GetState() {
                 break;    
         }
     } 
-
-    free(state.axes);
-    free(state.hats);
-    free(state.buttons);
+\
 }
 
 // Close the SDL device
 void x52p_linux64::UnacqDev() {
     SDL_JoystickClose(thejoys);
+    free(state.axes);
+    free(state.hats);
+    free(state.buttons);
 }
 
 ///////////////////////////////// AXES /////////////////////////////////
