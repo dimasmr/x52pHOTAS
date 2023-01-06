@@ -2,7 +2,7 @@
 // Osaka University: Dimas M. Rachman, 2023.
 // Functions definitions file. Requires x52p_linux64.h header!
 // This file is not a main file (implementation), you need to make your own implementation file!
-// Nevertheless, a sample is provided, namely LINUX_TEXTWORKX52P.cpp.
+// Nevertheless, a sample is provided, namely LINUX_TESTWORKX52P.cpp.
 // Saitek/Logitech x52 pro HOTAS.
 // Linux and Visual Studio Code with gcc compiler.
 
