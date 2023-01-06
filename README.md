@@ -1,6 +1,6 @@
 # x52proHOTAS
 Logitech/Saitek x52 pro H.O.T.A.S. joystick interface using SDL2 API in Linux.
-**This requires SDL API in Linux. For Windows, see the main branch of this repository. No Simulink/CMEX S-Function implementation**.
+**This requires SDL API in Linux. For Windows, see the main branch of this repository. This linux brach has no Simulink/CMEX S-Function implementation**.
 Developed on the basis of the samples shown in https://github.com/meleu/jstest-sdl.
 
 Make sure you have installed SDL or SDL2 API https://wiki.libsdl.org/SDL2/Installation. This provides all the necessary headers like SDL.h and its relevant dependency files. You can install via sudo apt: ``` sudo apt-get install libsdl2-dev ```.
